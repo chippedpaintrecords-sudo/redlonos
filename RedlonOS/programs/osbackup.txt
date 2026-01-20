@@ -1,0 +1,250 @@
+
+
+
+@echo off
+
+
+title Redl0Matrix
+setlocal enabledelayedexpansion
+
+
+:: Set the text color to green
+color 0A
+
+
+:MENU
+cls
+echo.
+echo.
+echo.
+echo                :::::::::  :::::::::: :::::::::  :::        ::::::::  ::::    :::
+echo               :+:    :+: :+:        :+:    :+: :+:       :+:    :+: :+:+:   :+: 
+echo              +:+    +:+ +:+        +:+    +:+ +:+       +:+    +:+ :+:+:+  +:+  
+echo             +#++:++#:  +#++:++#   +#+    +:+ +#+       +#+    +:+ +#+ +:+ +#+   
+echo            +#+    +#+ +#+        +#+    +#+ +#+       +#+    +#+ +#+  +#+#+#    
+echo           #+#    #+# #+#        #+#    #+# #+#       #+#    #+# #+#   #+#+#     
+echo          ###    ### ########## #########  ########## ########  ###    ####      
+echo                               ___  __                                   
+echo                     ^|\/^|  /\   ^|  ^|__) ^| \_/TM
+echo                     ^|  ^| /~~\  ^|  ^|  \ ^| / \      V1.1
+echo.
+echo                                BS-DOS Console Interface
+echo                               (c) 1989 - 2026 Ben Snyder
+echo _____________________________________________________________________________________________
+echo.
+echo.
+:: Only play startup sound once per user (creates a flag file)
+if not exist "%TEMP%\redlon_startup_played.flag" (
+    powershell -c "$p='C:\Users\bs\Desktop\New folder (2)\startup.wav'; (New-Object Media.SoundPlayer $p).PlaySync();"
+    echo played>"%TEMP%\redlon_startup_played.flag"
+)
+echo.
+echo.
+echo  Type "commands" for command list.
+echo.
+set /p choice= ***
+
+if /i "%choice%"=="calc"     goto CALCULATOR
+if /i "%choice%"=="gpt"      goto GPT
+if /i "%choice%"=="dt"       goto DT
+if /i "%choice%"=="pt"       goto PT
+if /i "%choice%"=="ezword"   goto WORD_PROCESSOR
+if /i "%choice%"=="np"       goto NOTEPAD
+if /i "%choice%"=="i"        goto INTERNET
+if /i "%choice%"=="r"        goto REDDIT
+if /i "%choice%"=="fl"       goto FL
+if /i "%choice%"=="t"        goto TIDAL
+if /i "%choice%"=="tor"      goto TOR
+if /i "%choice%"=="y"        goto YOUTUBE
+if /i "%choice%"=="ph"       goto PH
+if /i "%choice%"=="fs"       goto FILES
+if /i "%choice%"=="monica"   goto M
+if /i "%choice%"=="cannons"  goto CANNONS
+if /i "%choice%"=="mspt"     goto PAINT
+if /i "%choice%"=="music"    goto WINAMP
+if /i "%choice%"=="sc"       goto SHOTCUT
+if /i "%choice%"=="au"       goto AUDACITY
+if /i "%choice%"=="settings" goto SETTINGS
+if /i "%choice%"=="svp"      goto SVP
+if /i "%choice%"=="commands" goto COMMANDS
+if /i "%choice%"=="sys" goto SYS
+if /i "%choice%"=="piano" goto PIANO
+if /i "%choice%"=="seq" goto SEQUENCER
+if /i "%choice%"=="logoff" goto LOGOFF
+if /i "%choice%"=="return"   goto RETURN
+if /i "%choice%"=="cube"     goto CUBE
+if /i "%choice%"=="tunnel"    goto TUNNEL
+if /i "%choice%"=="star"     goto STAR
+if /i "%choice%"=="terrain"  goto TERRAIN
+if /i "%choice%"=="sd"       exit
+
+
+
+:: Unknown command -> redraw menu
+goto MENU
+
+
+:RETURN
+cls
+call "C:\Users\bs\Desktop\New folder (2)\os.bat"
+goto MENU
+
+:STAR
+cls
+echo Launching Redl0n Starfield Warp...
+powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -File "C:\RedlonOS\starfield.ps1"
+goto MENU
+
+:TERRAIN
+cls
+echo Launching Redl0n Terrain Flyover...
+powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -File "C:\RedlonOS\terrain.ps1"
+goto MENU
+
+:CALCULATOR
+cls
+call "C:\Users\bs\Desktop\New folder (2)\calc.bat"
+goto MENU
+
+:WORD_PROCESSOR
+cls
+call "C:\Users\bs\Desktop\New folder (2)\wwerd.bat"
+goto MENU
+
+:INTERNET
+cls
+call "C:\Users\bs\Desktop\New folder (2)\internet.bat"
+goto MENU
+
+:REDDIT
+cls
+call "C:\Users\bs\Desktop\New folder (2)\reddit.bat"
+goto MENU
+
+:FL
+cls
+call "C:\Users\bs\Desktop\New folder (2)\fl.bat"
+goto MENU
+
+:COMMANDS
+cls
+call "C:\Users\bs\Desktop\New folder (2)\commands.bat"
+goto MENU
+
+:TOR
+cls
+call "C:\Users\bs\Desktop\New folder (2)\tor.bat"
+goto MENU
+
+:TIDAL
+cls
+call "C:\Users\bs\Desktop\New folder (2)\tidal.bat"
+goto MENU
+
+:YOUTUBE
+cls
+call "C:\Users\bs\Desktop\New folder (2)\yt.bat"
+goto MENU
+
+:PH
+cls
+call "C:\Users\bs\Desktop\New folder (2)\ph.bat"
+goto MENU
+
+:FILES
+cls
+call "C:\Users\bs\Desktop\New folder (2)\files.bat"
+goto MENU
+
+:M
+cls
+call "C:\Users\bs\Desktop\New folder (2)\fetch.bat"
+goto MENU
+
+:CANNONS
+cls
+call "C:\Users\bs\Desktop\New folder (2)\cannons.bat"
+goto MENU
+
+:PAINT
+cls
+call "C:\Users\bs\Desktop\New folder (2)\paint.bat"
+goto MENU
+
+:SHOTCUT
+cls
+call "C:\Users\bs\Desktop\New folder (2)\shotcut.bat"
+goto MENU
+
+:AUDACITY
+cls
+call "C:\Users\bs\Desktop\New folder (2)\audacity.bat"
+goto MENU
+
+:WINAMP
+cls
+call "C:\Users\bs\Desktop\New folder (2)\winamp.bat"
+goto MENU
+
+:NOTEPAD
+cls
+call "C:\Users\bs\Desktop\New folder (2)\notepad.bat"
+goto MENU
+
+:DT
+cls
+call "C:\Users\bs\Desktop\New folder (2)\dtw.bat"
+goto MENU
+
+:PT
+cls
+call "C:\Users\bs\Desktop\New folder (2)\pt.bat"
+goto MENU
+
+:GPT
+cls
+call "C:\Users\bs\Desktop\New folder (2)\gpt.bat"
+goto MENU
+
+:SETTINGS
+cls
+call "C:\Users\bs\Desktop\New folder (2)\settings.bat"
+goto MENU
+
+:SVP
+cls
+call "C:\Users\bs\Desktop\New folder (2)\svp.bat"
+goto MENU
+
+:Sys
+cls
+call "C:\Users\bs\Desktop\New folder (2)\sys.bat"
+goto MENU
+
+:TUNNEL
+cls
+echo Launching Redl0n Wire Tunnel...
+powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -File "C:\Users\bs\Desktop\New folder (2)\wiretunnel.ps1"
+goto MENU
+
+:PIANO
+cls
+echo Launching Redl0n Piano...
+powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -File "C:\RedlonOS\piano.ps1"
+goto MENU
+
+:SEQUENCER
+cls
+echo Launching Redl0n Sequencer...
+powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -File "C:\RedlonOS\sequencer.ps1"
+goto MENU
+
+:CUBE
+cls
+echo Launching Redl0n 3D Engine...
+powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -File "C:\Users\bs\Desktop\New folder (2)\cube.ps1"
+goto MENU
+
+:LOGOFF
+cls
+call "C:\Users\bs\Desktop\New folder (2)\logoff.bat"

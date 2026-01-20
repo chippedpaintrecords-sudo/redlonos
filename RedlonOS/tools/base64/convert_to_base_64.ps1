@@ -1,0 +1,1 @@
+[Convert]::ToBase64String([IO.File]::ReadAllBytes("C:\RedlonOS\tools\RedlonOS (2).zip")) > redlonmatrix.b64
