@@ -37,12 +37,19 @@
     <br>
     To use these, copy and paste them into a ".txt" file, then change the file extention to ".bat".
 <hr noshade="noshade" size="2">
-
+<b>•.wav/.flac to .mp3 converter</b>
 <div class="code-block">
     <button class="copy-btn" onclick="copyCode('code1')">Copy</button>
     <pre><code id="code1">
 @echo off
-echo Hello from RedlonMatrix!
+mkdir mp3
+
+for %%f in (*.wav *.flac) do (
+    echo Converting %%f...
+    ffmpeg -y -i "%%f" -map_metadata 0 -vn -ab 320k "mp3\%%~nf.mp3"
+)
+
+echo Done!
 pause
     </code></pre>
 </div>
@@ -74,4 +81,5 @@ function copyCode(id) {
 
 </body>
 </html>
+
 
