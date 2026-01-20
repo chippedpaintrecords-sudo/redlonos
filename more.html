@@ -38,38 +38,22 @@
     To use these, copy and paste them into a ".txt" file, then change the file extention to ".bat".<br>
     or as ".ps1", depending on terminal type. 
 <hr noshade="noshade" size="2">
-<b>[•.wav/.flac to .mp3 converter]</b><br><br>
-<div class="code-block">
+</p>
 
-    <pre><code id="code1">
-@echo off
-mkdir mp3
+<br><br>
 
-for %%f in (*.wav *.flac) do (
-    echo Converting %%f...
-    ffmpeg -y -i "%%f" -map_metadata 0 -vn -ab 320k "mp3\%%~nf.mp3"
-)
+<font size="+1"><b>Free Software Pack</b></font>
+<hr noshade="noshade" size="2">
 
-echo Done!
-pause
-    </code></pre>
-</div>
-
-<div class="code-block">
-
-    <pre><code id="code2">
-powershell -NoProfile -ExecutionPolicy Bypass -Command "Write-Host 'RedlonMatrix PowerShell'"
-    </code></pre>
-</div>
-
-<script>
-function copyCode(id) {
-    const code = document.getElementById(id).innerText.trim();
-    navigator.clipboard.writeText(code).then(() => {
-        alert("Copied!");
-    });
-}
-</script>
+<table cellspacing="0" cellpadding="1" border="0">
+    <tr align="center">
+        <td>
+            <a href="software.zip">Click here to download various free software for Windows.<br>
+This is a collection of CMD, Poweshell, and .exe files written by me.<br></a>
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+</table>
 
 <br><br>
 
@@ -82,6 +66,7 @@ function copyCode(id) {
 
 </body>
 </html>
+
 
 
 
